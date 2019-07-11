@@ -1,0 +1,13 @@
+cn\edu\xaut\web\ToMinimumDFA.class
+cn\edu\xaut\demo\MyHashSet.class
+cn\edu\xaut\demo\Pair.class
+cn\edu\xaut\demo\RegexToDefinedDFA.class
+cn\edu\xaut\demo\MinimumDFA.class
+cn\edu\xaut\web\ToDefinedDFA.class
+cn\edu\xaut\entity\Edge.class
+cn\edu\xaut\util\RandomColor.class
+cn\edu\xaut\demo\NFA.class
+cn\edu\xaut\demo\DefinedNFA.class
+cn\edu\xaut\demo\RegexToMinimumDFA.class
+cn\edu\xaut\web\ToNFA.class
+cn\edu\xaut\demo\RegexToNFA.class

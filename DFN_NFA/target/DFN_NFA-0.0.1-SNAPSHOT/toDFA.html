@@ -1,0 +1,212 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>正则表达式到确定有限自动机（DFA）</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assres/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assres/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assres/css/style.css">
+		<style>
+			#weatherWidget .currentDesc {
+				color: #ffffff !important;
+			}
+
+			.traffic-chart {
+				min-height: 335px;
+			}
+
+			#flotPie1 {
+				height: 150px;
+			}
+
+			#flotPie1 td {
+				padding: 3px;
+			}
+
+			#flotPie1 table {
+				top: 20px !important;
+				right: -10px !important;
+			}
+
+			.chart-container {
+				display: table;
+				min-width: 270px;
+				text-align: left;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+
+			#flotLine5 {
+				height: 105px;
+			}
+
+			#flotBarChart {
+				height: 150px;
+			}
+
+			#cellPaiChart {
+				height: 160px;
+			}
+		</style>
+		<!--GO.js -->
+		<script src="release/go.js"></script>
+		<script src="assets/color.js"></script>
+		<script src="assets/getdata.js"></script>
+		<script id="code" src="assets/basicinit.js"></script>
+		<!--bootstrap-->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/jquery-ui.min.js"></script>
+		<link type="text/css" href="assets/css/bootstrap.min.css" />
+		<link type="text/css" href="assets/css/jquery-ui.min.css" />
+	/head>
+
+	<body>
+		<!-- Left Panel -->
+		<aside id="left-panel" class="left-panel">
+			<nav class="navbar navbar-expand-sm navbar-default">
+				<div id="main-menu" class="main-menu collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="menu-title">正则表达式到有限自动机的转换</li>
+						<li >
+							<a href="toNFA.html"><i class="menu-icon fa fa-laptop"></i>toNFA</a>
+						</li>
+						<li class="active">
+							<a href="toDFA.html"> <i class="menu-icon fa fa-cogs"></i>toDFA</a>
+						</li>
+						<li>
+							<a href="toMiniDFA.html"> <i class="menu-icon fa fa-glass"></i>toMiniDFA</a>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</aside>
+		<!-- /#left-panel -->
+		<!-- Right Panel -->
+		<div id="right-panel" class="right-panel">
+			<!-- Header-->
+			<header id="header" class="header">
+				<div class="top-left">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+						<a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+					</div>
+				</div>
+			</header>
+			<!-- /#header -->
+			<!-- Content -->
+			<div class="content">
+				<!-- Animated -->
+				<div class="animated fadeIn">
+					<!-- Widgets  -->
+					<div class="row">
+
+
+					</div>
+					<!-- /Widgets -->
+					<!--  Traffic  -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="box-title">正则表达式到确定有限自动机（DFA） </h4>
+								</div>
+								<div class="row">
+									<div class="col col-md-6" style="margin-left:50px">
+										<div class="input-group">
+											<div class="input-group-btn">
+												<button class="btn btn-primary" onclick="ToDefinedDFA()">
+                                                    <i class="fa fa-search"></i> confirm
+                                                </button>
+											</div>
+											<input type="text" id="formula" name="input1-group2" placeholder="请输入正规式..." class="form-control">
+										</div><br />
+										<div id="sample" style="pointer-events: none;display: initial;">
+											<h3 class="box-title">状态转换图如下：</h3>
+											<div id="myDiagramDiv" style="border: solid 1px black; width:800px; height:400px"></div>
+										</div>
+									</div>
+								</div> <!-- /.row -->
+								<div class="card-body"></div>
+							</div>
+						</div><!-- /# column -->
+					</div>
+					<!--  /Traffic -->
+					<div class="clearfix"></div>
+					<!-- Orders -->
+					<div class="orders">
+						<div class="row">
+							<div class="col-xl-8">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="box-title">Orders </h4>
+									</div>
+									<div class="card-body--">
+										<div class="table-stats order-table ov-h">
+											<table class="table ">
+												<thead>
+													<tr>
+														<th class="serial">#</th>
+														<th>ID</th>
+														<th>Name</th>
+														<th>Product</th>
+														<th>Quantity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="serial">1.</td>
+														<td> #5469 </td>
+														<td> <span class="name">Louis Stanley</span> </td>
+														<td> <span class="product">iMax</span> </td>
+														<td><span class="count">231</span></td>
+													</tr>
+													<tr>
+														<td class="serial">2.</td>
+														<td> #5468 </td>
+														<td> <span class="name">Gregory Dixon</span> </td>
+														<td> <span class="product">iPad</span> </td>
+														<td><span class="count">250</span></td>
+													</tr>
+													<tr>
+														<td class="serial">3.</td>
+														<td> #5467 </td>
+														<td> <span class="name">Catherine Dixon</span> </td>
+														<td> <span class="product">SSD</span> </td>
+														<td><span class="count">250</span></td>
+													</tr>
+												</tbody>
+											</table>
+										</div> <!-- /.table-stats -->
+									</div>
+								</div> <!-- /.card -->
+							</div> <!-- /.col-lg-8 -->
+						</div>
+					</div>
+					<!-- /.orders -->
+				</div>
+				<!-- .animated -->
+			</div>
+			<!-- /.content -->
+			<div class="clearfix"></div>
+			<!-- Footer -->
+			<footer class="site-footer">
+				<div class="footer-inner bg-white">
+					<div class="row">
+						<div class="col-sm-6">
+							Copyright &copy; 2019 西安理工大学 <a href="http://www.xaut.edu.cn/" target="_blank" title="官网">西安理工大学</a>
+						</div>
+						<div class="col-sm-6 text-right"> Designed by 441
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /.site-footer -->
+		</div>
+		<!-- /#right-panel -->
+
+		<script src="assres/js/vendor/jquery-2.1.4.min.js"></script>
+		<script src="assres/js/plugins.js"></script>
+		<script src="assres/js/main.js"></script>
+	</body>
+</html>
