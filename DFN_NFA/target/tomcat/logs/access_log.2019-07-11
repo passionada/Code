@@ -2,3 +2,11 @@
 0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:29:17 +0800] "GET /assres/css/bootstrap.min.css.map HTTP/1.1" 404 1015 http-bio-9101-exec-3 8
 0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:29:17 +0800] "GET /assres/js/bootstrap.min.js.map HTTP/1.1" 404 1011 http-bio-9101-exec-4 2
 0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:29:39 +0800] "POST /ToNFA HTTP/1.1" 500 3023 http-bio-9101-exec-5 45
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:31:55 +0800] "GET / HTTP/1.1" 304 - http-bio-9101-exec-2 83
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:31:56 +0800] "GET /assres/css/bootstrap.min.css.map HTTP/1.1" 404 1015 http-bio-9101-exec-3 8
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:31:56 +0800] "GET /assres/js/bootstrap.min.js.map HTTP/1.1" 404 1011 http-bio-9101-exec-4 1
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:31:59 +0800] "POST /ToNFA HTTP/1.1" 200 332 http-bio-9101-exec-5 361
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:33:54 +0800] "GET /toDFA.html HTTP/1.1" 200 6589 http-bio-9101-exec-7 5
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:33:57 +0800] "POST /ToDefinedDFA HTTP/1.1" 200 262 http-bio-9101-exec-8 7
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:34:20 +0800] "GET /toMiniDFA.html HTTP/1.1" 200 6653 http-bio-9101-exec-10 1
+0:0:0:0:0:0:0:1 - - [11/Jul/2019:16:34:31 +0800] "POST /ToMinimumDFA HTTP/1.1" 200 146 http-bio-9101-exec-10 5
